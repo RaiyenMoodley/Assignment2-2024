@@ -274,6 +274,7 @@ class AVLOptions<T extends Entry> {
         }
     }
 
+    // fillEntries method to insert Node objects from Knowledge Base into an AVL tree.
     public void fillEntries(String fileName, int fileLines) {
         try {
             Scanner scanner = new Scanner(new File(fileName));
@@ -299,11 +300,13 @@ class AVLOptions<T extends Entry> {
         }
     }
 
+    //prints the search and insert operation counters.
     public void printOpCounter(){
         System.out.println("Insert Operation Count: "+ insertCount);
         System.out.println("Search Operation Count: " + searchCount);
     }
 
+    // fileFinder finds the specified file recursively from the main directory
     public String fileFinder(String directoryPath, String fileName) {
         File directory = new File(directoryPath);
         if (!directory.isDirectory()) {
