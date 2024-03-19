@@ -1,3 +1,11 @@
+/**
+ * Node class that represents each node of an AVL tree and stores and Entry class in it.
+ * @param <T extends Entry>
+ * Raiyen Moodley
+ * MDLRAI001
+ * 19/03/2024
+ */
+
 public class Node<T extends Entry>{
     public Node<Entry> left;
     public Node<Entry> right;
