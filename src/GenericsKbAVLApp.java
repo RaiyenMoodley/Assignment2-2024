@@ -29,6 +29,7 @@ public class GenericsKbAVLApp {
 
             switch (choice) {
                 case 1: {
+                    //Loading knowledge base
                     String directory = new File("").getAbsolutePath();
                     System.out.println("Enter file name: ");
                     String file = scanner.nextLine();
@@ -45,6 +46,7 @@ public class GenericsKbAVLApp {
                 }
 
                 case 2: {
+                    //Adding term to knowledge base.
                     System.out.println("Enter term: ");
                     String entryTerm = scanner.nextLine();
                     System.out.println("Enter statement: ");
@@ -58,6 +60,7 @@ public class GenericsKbAVLApp {
                 }
 
                 case 3: {
+                    //Searching for a node by a term.
                     System.out.println("Enter term to search for: ");
                     String term = scanner.nextLine();
                     avlOptions.searchElement(term);
@@ -65,6 +68,7 @@ public class GenericsKbAVLApp {
                 }
 
                 case 4: {
+                    //Searching for a node by a term and statement.
                     System.out.println("Enter term to search for: ");
                     String part1 = scanner.nextLine();
                     System.out.println("Enter statement to search for: ");
@@ -74,6 +78,7 @@ public class GenericsKbAVLApp {
                 }
 
                 case 5: {
+                    //Searching for nodes via a query file.
                     String dir1 = new File("").getAbsolutePath();
                     System.out.println("Enter file to search for: ");
                     String searchFile = scanner.nextLine();
@@ -98,11 +103,13 @@ public class GenericsKbAVLApp {
                 }
 
                 case 6: {
+                    //Prints out Insert and Search operation counters
                     avlOptions.printOpCounter();
                     break;
                 }
 
                 case 7: {
+                    //Ends program
                     decision = false;
                     break;
                 }
