@@ -1,3 +1,10 @@
+/**
+ * GenericsKBAVLApp is the main program that provides a space for user interaction with a Knowledge Base.
+ * Raiyen Moodley
+ * MDLRAI001
+ * 19/03/2024
+ */
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
