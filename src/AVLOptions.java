@@ -53,7 +53,6 @@ class AVLOptions<T extends Entry> {
         if (node == null) {
             return new Node<>(value);
         }
-
         // Insertion logic
         int cmp = value.getTerm().compareTo(node.value.getTerm());
         if (cmp < 0) {
@@ -135,15 +134,12 @@ class AVLOptions<T extends Entry> {
     // creating rotateWithRightChild() method to perform rotation of binary tree node with right child
     private Node<Entry> rotateWithRightChild(Node<Entry> y) {
         Node<Entry> x = y.left;
-        insertCount++;
         Node<Entry> T2 = x.right;
-        insertCount++;
+
 
         // Perform rotation
         x.right = y;
-        insertCount++;
         y.left = T2;
-        insertCount++;
 
         // Update heights
         y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;
@@ -156,14 +152,12 @@ class AVLOptions<T extends Entry> {
     //create doubleWithLeftChild() method to perform double rotation of binary tree node. This method first rotate the left child with its right child, and after that, node3 with the new left child
     private Node<Entry> doubleWithLeftChild(Node<Entry> node3) {
         node3.left = rotateWithRightChild(node3.left);
-        insertCount++;
         return rotateWithLeftChild(node3);
     }
 
     //create doubleWithRightChild() method to perform double rotation of binary tree node. This method first rotate the right child with its left child and after that node1 with the new right child
     private Node<Entry> doubleWithRightChild(Node<Entry> node1) {
         node1.right = rotateWithLeftChild(node1.right);
-        insertCount++;
         return rotateWithRightChild(node1);
     }
 
@@ -178,9 +172,7 @@ class AVLOptions<T extends Entry> {
         else {
             int length = 1;
             length = length + getTotalNumberOfNodes(head.left);
-            insertCount++;
             length = length + getTotalNumberOfNodes(head.left);
-            insertCount++;
             return length;
         }
     }
