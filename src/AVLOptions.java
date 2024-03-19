@@ -1,7 +1,11 @@
+/**
+ * AVLOptions class that stores all the methods used to add functionality for an AVL tree.
+ * Raiyen Moodley
+ * MDLRAI001
+ * 19/03/2024
+ */
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
