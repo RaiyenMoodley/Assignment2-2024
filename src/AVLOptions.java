@@ -1,16 +1,20 @@
+
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 class AVLOptions<T extends Entry> {
     private Node<Entry> rootNode;
-    int opCount;
+    int searchCount;
+    int insertCount;
 
     //Constructor to set null value to the rootNode
     public AVLOptions() {
         rootNode = null;
-        this.opCount = 0;
+        this.searchCount = 0;
+        this.insertCount = 0;
     }
 
     public AVLOptions(Node<Entry> root) {
@@ -40,7 +44,7 @@ class AVLOptions<T extends Entry> {
         return Math.max(leftNodeHeight, rightNodeHeight);
     }
 
-    // create insertElement() to insert element to to the AVL Tree
+    // create insertElement() to insert element to the AVL Tree
     public void insertElement(Entry element) {
         rootNode = insertElement(rootNode, element);
     }
@@ -54,10 +58,10 @@ class AVLOptions<T extends Entry> {
         int cmp = value.getTerm().compareTo(node.value.getTerm());
         if (cmp < 0) {
             node.left = insertElement(node.left, value);
-            opCount++;
+            insertCount++;
         } else if (cmp > 0) {
             node.right = insertElement(node.right, value);
-            opCount++;
+            insertCount++;
         } else {
             // Duplicate value, handle according to specific requirements
             return node;
@@ -72,27 +76,27 @@ class AVLOptions<T extends Entry> {
         // Perform rotations to balance the tree
         // Left Left Case
         if (balance > 1 && value.getTerm().compareTo(node.left.value.getTerm()) < 0) {
-            opCount++;
+            insertCount++;
             return rotateWithRightChild(node);
         }
 
         // Right Right Case
         if (balance < -1 && value.getTerm().compareTo(node.right.value.getTerm()) > 0) {
-            opCount++;
+            insertCount++;
             return rotateWithLeftChild(node);
         }
 
         // Left Right Case
         if (balance > 1 && value.getTerm().compareTo(node.left.value.getTerm()) > 0) {
             node.left = rotateWithLeftChild(node.left);
-            opCount++;
+            insertCount++;
             return rotateWithRightChild(node);
         }
 
         // Right Left Case
         if (balance < -1 && value.getTerm().compareTo(node.right.value.getTerm()) < 0) {
             node.right = rotateWithRightChild(node.right);
-            opCount++;
+            insertCount++;
             return rotateWithLeftChild(node);
         }
 
@@ -110,15 +114,15 @@ class AVLOptions<T extends Entry> {
     // creating rotateWithLeftChild() method to perform rotation of binary tree node with left child
     private Node<Entry> rotateWithLeftChild(Node<Entry> x) {
         Node<Entry> y = x.right;
-        opCount++;
+        insertCount++;
         Node<Entry> T2 = y.left;
-        opCount++;
+        insertCount++;
 
         // Perform rotation
         y.left = x;
-        opCount++;
+        insertCount++;
         x.right = T2;
-        opCount++;
+        insertCount++;
 
         // Update heights
         x.height = Math.max(getHeight(x.left), getHeight(x.right)) + 1;
@@ -131,15 +135,15 @@ class AVLOptions<T extends Entry> {
     // creating rotateWithRightChild() method to perform rotation of binary tree node with right child
     private Node<Entry> rotateWithRightChild(Node<Entry> y) {
         Node<Entry> x = y.left;
-        opCount++;
+        insertCount++;
         Node<Entry> T2 = x.right;
-        opCount++;
+        insertCount++;
 
         // Perform rotation
         x.right = y;
-        opCount++;
+        insertCount++;
         y.left = T2;
-        opCount++;
+        insertCount++;
 
         // Update heights
         y.height = Math.max(getHeight(y.left), getHeight(y.right)) + 1;
@@ -152,14 +156,14 @@ class AVLOptions<T extends Entry> {
     //create doubleWithLeftChild() method to perform double rotation of binary tree node. This method first rotate the left child with its right child, and after that, node3 with the new left child
     private Node<Entry> doubleWithLeftChild(Node<Entry> node3) {
         node3.left = rotateWithRightChild(node3.left);
-        opCount++;
+        insertCount++;
         return rotateWithLeftChild(node3);
     }
 
     //create doubleWithRightChild() method to perform double rotation of binary tree node. This method first rotate the right child with its left child and after that node1 with the new right child
     private Node<Entry> doubleWithRightChild(Node<Entry> node1) {
         node1.right = rotateWithLeftChild(node1.right);
-        opCount++;
+        insertCount++;
         return rotateWithRightChild(node1);
     }
 
@@ -174,9 +178,9 @@ class AVLOptions<T extends Entry> {
         else {
             int length = 1;
             length = length + getTotalNumberOfNodes(head.left);
-            opCount++;
+            insertCount++;
             length = length + getTotalNumberOfNodes(head.left);
-            opCount++;
+            insertCount++;
             return length;
         }
     }
@@ -194,13 +198,14 @@ class AVLOptions<T extends Entry> {
     private Entry searchElement(Node<Entry> head, String term) {
         while (head != null) {
             Entry headElement = head.value;
+            searchCount++;
             if (term.compareTo(headElement.getTerm()) < 0) {
                 head = head.left;
-                opCount++;
+                searchCount++;
             }
             else if (term.compareTo(headElement.getTerm()) > 0){
                 head = head.right;
-                opCount++;
+                searchCount++;
             } else {
                 return headElement;
             }
@@ -223,10 +228,10 @@ class AVLOptions<T extends Entry> {
             int comparison = query.toLowerCase().compareTo((headElement.term + "\t" + headElement.statement).toLowerCase());
             if (comparison < 0) {
                 head = head.left;
-                opCount++;
+                searchCount++;
             } else if (comparison > 0) {
                 head = head.right;
-                opCount++;
+                searchCount++;
             } else {
                 return headElement;
             }
@@ -273,19 +278,19 @@ class AVLOptions<T extends Entry> {
         }
     }
 
-    public void fillEntries(String fileName) {
+    public void fillEntries(String fileName, int fileLines) {
         try {
             Scanner scanner = new Scanner(new File(fileName));
             String line;
-            while (scanner.hasNextLine()) {
+            for (int i = 0; i < fileLines; i++) {
                 line = scanner.nextLine();
-                opCount++;
+                insertCount++;
                 String[] ent = line.split("\t");
-                opCount++;
+                insertCount++;
                 if (ent.length >= 3) {
                     Entry x = new Entry(ent[0], ent[1], Double.parseDouble(ent[2]));
                     insertElement(x);
-                    opCount++;
+                    insertCount++;
                 } else {
                     // Log an error or handle the incomplete entry appropriately
                     System.err.println("Incomplete entry: " + line);
@@ -299,7 +304,8 @@ class AVLOptions<T extends Entry> {
     }
 
     public void printOpCounter(){
-        System.out.println("Operations Count: "+ opCount);
+        System.out.println("Insert Operation Count: "+ insertCount);
+        System.out.println("Search Operation Count: " + searchCount);
     }
 
     public String fileFinder(String directoryPath, String fileName) {
@@ -313,11 +319,14 @@ class AVLOptions<T extends Entry> {
             for (File file : files) {
                 if (file.isDirectory()) {
                     String filePath = fileFinder(file.getAbsolutePath(), fileName);
+                    searchCount++;
                     if (filePath != null) {
+                        searchCount++;
                         return filePath;
                     }
                 } else {
                     if (file.getName().equals(fileName)) {
+                        searchCount++;
                         return file.getAbsolutePath();
                     }
                 }
