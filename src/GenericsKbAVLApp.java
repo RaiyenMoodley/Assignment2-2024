@@ -16,7 +16,8 @@ public class GenericsKbAVLApp {
             System.out.println("3. Search for a node by term.");
             System.out.println("4. Search for a node by term and statement.");
             System.out.println("5. Search for nodes via a file. ");
-            System.out.println("6. Exit.");
+            System.out.println("6. Operations");
+            System.out.println("7. Exit.");
             System.out.println("Choose an option: ");
             int choice = Integer.parseInt(scanner.nextLine());
 
@@ -26,8 +27,10 @@ public class GenericsKbAVLApp {
                     System.out.println("Enter file name: ");
                     String file = scanner.nextLine();
                     String fileFound = avlOptions.fileFinder(directory, file);
+                    System.out.println("Enter amount of lines to read in: ");
+                    String fileLines = scanner.nextLine();
                     if (fileFound != null){
-                        avlOptions.fillEntries(fileFound);
+                        avlOptions.fillEntries(fileFound, Integer.parseInt(fileLines));
                         System.out.println("AVL Tree filled!");
                     } else {
                         System.out.println(file + " not found!");
@@ -78,7 +81,6 @@ public class GenericsKbAVLApp {
                                 data = reader.nextLine();
                                 avlOptions.searchElement(data);
                             }
-                            avlOptions.printOpCounter();
                             reader.close();
                         } catch (IOException io) {
                             io.printStackTrace();
@@ -86,9 +88,15 @@ public class GenericsKbAVLApp {
                     } else {
                         System.out.println(searchFile + " not found!");
                     }
+                    break;
                 }
 
                 case 6: {
+                    avlOptions.printOpCounter();
+                    break;
+                }
+
+                case 7: {
                     decision = false;
                     break;
                 }
