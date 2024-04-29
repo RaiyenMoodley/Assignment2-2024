@@ -1,0 +1,101 @@
+many chemical reaction	Many chemical reaction occurs in reductions.	1.0
+rubber tree	Rubber trees live in areas.	1.0
+motorcycle helmet	Motorcycle helmets are helmets.	1.0
+muslin	A muslin is cloth	1.0
+retinal disorder	Retinal disorders are muscular degeneration or retinal dystrophy.	0.8037341833114624
+teasing	Teasings are means.	1.0
+spy	Spies are workers.	1.0
+eon	An eon is a spiritual being	1.0
+polyphenol oxidase	Polyphenol oxidase is an oxygen transferring enzyme.	0.8521060347557068
+acoustic wave	An acoustic wave is a wave	1.0
+whitecap	A whitecap is a wave	1.0
+firecracker	Firecrackers are fireworks.	1.0
+foul ball	A foul ball is foul	1.0
+captaincy	A captaincy is a position	1.0
+redbud	A redbud is a tree	1.0
+worm activity	Worm activities present appearances.	1.0
+geometric series	A geometric series is a series	1.0
+microscopic particle	Microscopic particles suspend in air.	1.0
+comer	Comers are rivals.	1.0
+epiphytic vegetation	Epiphytic vegetation provides resources.	1.0
+euthanasia	Euthanasia is by lethal injection of sodium pentobarbital.	0.7402001023292542
+eggplant	Eggplants are fruit.	1.0
+foghorn	A foghorn is a signal	1.0
+reduce energy use	Reduce energy use has benefits.	1.0
+abnormal heart	Abnormal heart rhythms, called arrhythmias, cause most sudden cardiac arrests.	0.7065814137458801
+hornpout	A hornpout is a bullhead catfish	1.0
+examiner	An examiner is an investigator	1.0
+nighthawk	Nighthawks are birds.	1.0
+brown lacewing	A brown lacewing is an insect	1.0
+different allele	Different alleles are different particles found in gametes.	0.7033765316009521
+nonsteroidal	A nonsteroidal is an organic compound	1.0
+sexed seman	Sexed semen is semen that contains only all male or all female sperm.	0.8282020092010498
+bushbaby	Bushbabies are small primates with long tails and large ears and eyes.	0.8412758708000183
+tour	Tours are journeys.	1.0
+contractor	Contractors have (part) human bodies.	1.0
+neglect	Neglect is declines.	1.0
+golden plum	Golden plums grow on ancient trees.	1.0
+shimmer	Shimmers are perturbation.	1.0
+fracture	Fractures are caused by a sudden injury that exerts more force on the bone than it can support.	0.7088443636894226
+glipizide	A glipizide is medicine	1.0
+rainy season	Rainy seasons are seasons.	1.0
+pacific ocean	Pacific oceans are located in atlases.	1.0
+conscript	A conscript is a man	1.0
+tax credit	Tax credit is decrease.	1.0
+tail lamp	Tail lamps have lenses.	1.0
+advisory board	Advisory boards are boards.	1.0
+beard iris	Beard irises have rhizomes.	1.0
+revolutionary	Revolutionaries are capable of free countries.	1.0
+extradition	Extraditions are surrenders.	1.0
+mediate factor	Mediate factors influence abundance distribution.	1.0
+pygmy squirrel	Pygmy squirrels reach height.	1.0
+geosynchronous orbit	A geosynchronous orbit is an orbit	1.0
+omniscience	Omniscience is a state	1.0
+carbon tissue	Carbon tissue is a water sensitive fibrous paper coated with smooth gelatin resist.	0.7145137786865234
+hologram	Holograms are graphics.	1.0
+constipation	Constipation occurs in life.	1.0
+lymphocytotoxic antibody	Lymphocytotoxic antibody is a predictor of response to random donor platelet transfusion.	0.7226101160049438
+tramontane	A tramontane is wind	1.0
+resuscitation	Resuscitation causes life.	1.0
+bigotry	Bigotry causes hatred.	1.0
+dark spot	Dark spots are natural things.	1.0
+mistletoe seed	Mistletoe seeds are covered with a glue-like substance that sticks to the bills of birds.	0.7956692576408386
+chronic bronchitis	Chronic bronchitis is an inflammation and eventual scarring of the lining of the bronchial tubes.	0.797034740447998
+colorful bird	Colorful birds use feathers.	1.0
+western gull	Western gulls feed over the open ocean or along rocky shores.	0.7539706230163574
+aerial locomotion	Aerial locomotion includes gliding, soaring, and true flight.	0.7296407222747803
+banana bread	Banana bread is bread.	1.0
+downgrade	A downgrade is a grade	1.0
+blueprint	Blueprints are plans.	1.0
+prefecture	A prefecture is a position	1.0
+minor league	A minor league is a league	1.0
+different drum	Different drums produce sound.	1.0
+spotted frog	Spotted frogs are predators and hunt insects and other small animals for food.	0.8222881555557251
+infect badger	Infect badgers survive for long periods.	1.0
+itchy skin	Itchy skin is an early sign of phosphorous building up in the blood stream.	0.7792743444442749
+pre spawn	Pre spawn is the time when fish are moving into the shallows after their winter haunts.	0.7742607593536377
+drug trial	Drug trials are clinical trials.	1.0
+vector field	Vector fields are functions.	1.0
+largo	A largo is passage	1.0
+coreopsis	Coreopsises are perennials.	1.0
+cortex	Cortexes have (part) vacuoles.	1.0
+oak park	Oak parks are stations.	1.0
+deregulation	Deregulation is liberations.	1.0
+true mammal	True mammals have a mandible made by a single couple of bones, and three ossicles in the mid-ear.	0.7971620559692383
+exclusive	An exclusive is a report	1.0
+visual aspect	A visual aspect is quality	1.0
+common bed bug	Common bed bugs infest houses.	1.0
+small insect	Small insects can burrow into the leaves and seedpods.	0.7519819736480713
+evolution	Evolution is a change in a population s gene frequencies over time.	0.749197244644165
+unilateral disease	Unilateral disease is associated with a normal prognosis.	0.7268425822257996
+mendelian inheritance	Mendelian inheritance refers to the inheritance of traits controlled by a single with two .	0.7033224701881409
+isomorphism	An isomorphism is similarity	1.0
+lysogenic phage	Lysogenic phages resemble bacterial genetic particles known as episomes .	0.7683312892913818
+thermal equilibrium	Thermal equilibrium is the state of maximum entropy.	0.7112293243408203
+map	Maps have (part) sections.	1.0
+butyl rubber	Butyl rubber is synthetic rubber	1.0
+horned puffin	Horned puffins spend their summer on the Pacific coast.	0.7189697027206421
+aphorism	An aphorism is an axiom	1.0
+black arrow	Black arrows indicate paths.	1.0
+krait	A krait is a snake	1.0
+kb	A kb is an unit	1.0

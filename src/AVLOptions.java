@@ -194,7 +194,6 @@ class AVLOptions<T extends Entry> {
     private Entry searchElement(Node<Entry> head, String term) {
         while (head != null) {
             Entry headElement = head.value;
-            searchCount++;
             if (term.compareTo(headElement.getTerm()) < 0) {
                 head = head.left;
                 searchCount++;
